@@ -56,6 +56,7 @@ async def check_vacancies_on_page(page_number):
     else:
         print(f"Failed to fetch page {page_number}: {response.status_code}")
         return []
+    time.sleep(2)
 
     soup = BeautifulSoup(response.text, 'html.parser')
 
