@@ -89,7 +89,7 @@ async def check_all_vacancies():
     if all_available_jobs:
         message = "Қолжетімді акансиялар:\n\n" + "\n\n".join(all_available_jobs)
         print(f"Sending message with {len(all_available_jobs)} jobs.")
-        await bot.send_message(chat_id=CHAT_ID, text=message)  # Await the send_message call
+        await bot.bot.send_message(chat_id=CHAT_ID, text=message)  # Await the send_message call
     else:
         print("No new jobs found, nothing to send.")
 
